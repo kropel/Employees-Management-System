@@ -1,0 +1,39 @@
+.siteTag {
+  background: #fff;
+  border-style: dashed;
+  align-self: flex-start;
+  margin-top: 5px;
+}
+
+.tagInput {
+  width: 78px;
+  margin-right: 8px;
+  vertical-align: top;
+}
+
+.formWrapper {
+  max-width: 50%;
+}
+
+.goBack {
+  margin-bottom: 20px;
+  align-self: flex-end;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.tagWrapper {
+  display: flex;
+  align-items: flex-end;
+}
+
+.buttonWrapper {
+  margin-top: 20px;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,45 @@
+$border-style: 1px solid black;
+
+.TableScroll {
+  position: relative;
+  width: 100%;
+
+  margin: auto;
+  overflow: auto;
+  height: 800px;
+}
+.Table {
+  // display: inline-flex;
+  // flex-direction: column;
+  // flex-wrap: nowrap;
+  // align-content: flex-start;
+  // flex: 1;
+
+  width: 100%;
+  // min-width: 1280px;
+  margin: auto;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.Header {
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.HeadersContainer {
+  display: flex;
+}
+
+.HeaderOne {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  z-index: 5;
+  align-items: flex-start;
+  background-color: #fff;
+}
+.Drawer {
+  font-size: 22px;
+}

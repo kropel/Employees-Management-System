@@ -1,0 +1,65 @@
+$CellWith: 60px;
+$CellHeight: 50px;
+$SignatureWith: 299px;
+
+.Row {
+  display: inline-flex;
+  border: 1px solid black;
+  border-bottom: none;
+  border-top: none;
+  position: sticky;
+  top: 310px;
+  z-index: 5;
+  background-color: #fff;
+}
+.Title {
+  height: $CellHeight;
+  width: $SignatureWith;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 5px;
+  border-top: 1px solid black;
+}
+.Cell {
+  width: $CellWith;
+  height: $CellHeight;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Ok {
+  color: green;
+}
+.Under {
+  color: red;
+}
+.Over {
+  color: green;
+}
+.Column {
+  display: flex;
+  flex-direction: column;
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  align-items: flex-start;
+  background-color: #fff;
+  // justify-content: flex-start;
+}
+
+.Content {
+  display: flex;
+  flex-direction: column;
+}
+
+.ContentRow {
+  display: flex;
+}
+
+.Table {
+  display: flex;
+}

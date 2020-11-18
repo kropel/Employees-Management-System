@@ -1,0 +1,18 @@
+.Piechart {
+  position: relative;
+  height: 300px;
+  width: 300px;
+
+  // border-left: $border-style;
+  // border-top: $border-style;
+}
+
+.PiechartCoverage {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

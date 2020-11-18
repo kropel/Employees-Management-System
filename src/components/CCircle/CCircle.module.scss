@@ -1,0 +1,40 @@
+$firstColor: #9ad4fc;
+$secondColor: #4b97cc;
+$size: 35px;
+
+@mixin CIRCLE {
+  border: 2px solid $firstColor;
+  border-style: solid;
+  border-radius: 50%;
+  width: $size;
+  height: $size;
+  background-color: white;
+}
+
+.LEVEL-1 {
+  @include CIRCLE();
+}
+.LEVEL-2 {
+  @include CIRCLE();
+  background: linear-gradient(90deg, white 50%, $firstColor 50%);
+}
+.LEVEL-3 {
+  @include CIRCLE();
+  background: $firstColor;
+}
+
+.LEVEL-4 {
+  @include CIRCLE();
+  border-color: $secondColor;
+  background: $secondColor;
+}
+//.TREE {
+//   @include CIRCLE();
+//   background: $firstColor;
+//   border-color: $secondColor;
+// }
+// .FOUR {
+//   @include CIRCLE();
+//   border-color: $secondColor;
+//   background: linear-gradient(90deg, $firstColor 50%, $secondColor 50%);
+// }

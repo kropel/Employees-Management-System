@@ -1,0 +1,14 @@
+.tableWrapper {
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tableButton {
+  margin-bottom: 20px;
+  align-self: flex-end;
+}
+.delete {
+  cursor: pointer;
+}

@@ -1,39 +1,34 @@
-import React, { useState } from 'react';
-import logo from './logo.svg';
-import { DemoButton } from './components/DemoButton/DemoButton';
-import { Button, Popover, Modal } from 'antd';
+import React, { useEffect, useState } from 'react';
+import { Router } from 'react-router-dom';
+
 import './App.scss';
 
+import history from './history';
+
+import CLayout from './components/CLayout/CLayout';
+import Login from './pages/Login/Login';
+
+import { hasToken } from './services/authSvc';
+
 export const App = () => {
-  const [modalShown, setModalShown] = useState<boolean>(false);
+  const [isToken, setIsToken] = useState(hasToken());
+
+  useEffect(() => history.listen(() => setIsToken(hasToken())), []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Praktyki!</h1>
-        <img width={40} alt="" src={logo} />
-      </header>
-      <hr />
-      Komponent testowy:
-      <div>
-        <DemoButton>This is a test!</DemoButton>
-      </div>
-      <hr />
-      Komponenty antd:
-      <div>
-        <Button>Antd Button</Button>
-      </div>
-      <div>
-        <Popover content={<strong>siemka</strong>}>
-          <Button>Siema</Button>
-        </Popover>
-      </div>
-      <div>
-        <Modal onCancel={() => setModalShown(false)} visible={modalShown}>
-          Jestem modalem
-        </Modal>
-        <Button onClick={() => setModalShown(true)}>Pokaż modal</Button>
-      </div>
-    </div>
+    <>
+      <Router history={history}>
+        {isToken ? (
+          <CLayout
+            handlerToken={() => {
+              setIsToken(false);
+            }}
+          />
+        ) : (
+          <Login setIsToken={setIsToken} />
+        )}
+      </Router>
+    </>
   );
 };
 
